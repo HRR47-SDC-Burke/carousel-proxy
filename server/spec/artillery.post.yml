@@ -1,0 +1,21 @@
+config:
+  target: "http://localhost:3000"
+  processor: "./artillery.functions.js"
+  phases:
+    - duration: 10
+      arrivalRate: 1
+      name: initial phase
+    - duration: 120
+      arrivalRate: 10
+      name: 10 requests/second
+    - duration: 120
+      arrivalRate: 100
+      name: 100 requests/second
+    - duration: 30
+      arrivalRate: 1000
+      name: 1000 requests/second
+scenarios:
+  - name: "POST"
+    flow:
+      - post:
+          url: "/api/images"

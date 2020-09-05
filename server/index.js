@@ -1,3 +1,4 @@
+const newrelic = require('newrelic');
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -13,9 +14,18 @@ app.use('/:id', express.static(path.join(__dirname, '/../client')));
 app.use(bodyParser.json());
 
 app.get('/api/images/:id', (req, res) => {
+  newrelic.setTransactionName('get');
   const id = req.url.slice(12);
   axios.get(`http://localhost:3001/api/images/${id}`)
     .then((data) => res.send(data.data))
+    .catch((error) => console.log(error));
+});
+
+app.post('/api/images', (req, res) => {
+  newrelic.setTransactionName('post');
+  const id = req.url.slice(12);
+  axios.post(`http://localhost:3001/api/images`)
+    .then(() => res.sendStatus(200))
     .catch((error) => console.log(error));
 });
 
