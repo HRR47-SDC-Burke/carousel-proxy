@@ -14,9 +14,9 @@ app.use('/:id', express.static(path.join(__dirname, '/../client')));
 
 app.use(bodyParser.json());
 
-const carouselUrl = process.env.CAROUSEL_URL || 'localhost:3001';
-const bookingUrl = process.env.BOOKING_URL || 'localhost:3002';
-const reviewsUrl = process.env.REVIEWS_URL || 'localhost:3003';
+const carouselUrl = process.env.CAROUSEL_URL || 'http://localhost:3001';
+const bookingUrl = process.env.BOOKING_URL || 'http://localhost:3002';
+const reviewsUrl = process.env.REVIEWS_URL || 'http://localhost:3003';
 
 app.get('/api/images/:id', (req, res) => {
   newrelic.setTransactionName('get');
