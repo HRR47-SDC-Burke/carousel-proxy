@@ -1,13 +1,13 @@
-# Project Name
+# Vacation Now
 
-Proxy server for Lairbnb, a vacation rental booking website.
+Proxy server for Vacation Now, a vacation rental booking website.
 
 ## Related Projects
 
-  - https://github.com/hrr47-fec8-webber/carousel-service
-  - https://github.com/hrr47-fec8-webber/booking-service
-  - https://github.com/hrr47-fec8-webber/reviews-service
-  - https://github.com/hrr47-fec8-webber/moreplacestostay-service
+  - https://github.com/HRR47-SDC-Burke/carousel-service
+  - https://github.com/HRR47-SDC-Burke/booking-service
+  - https://github.com/HRR47-SDC-Burke/reviews-service
+  - https://github.com/HRR47-SDC-Burke/moreplacestostay-service
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Proxy server for Lairbnb, a vacation rental booking website.
 
 ## Usage
 
-A proxy server for Lairbnb, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id. 
+A proxy server for Vacation Now, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id. 
 
 ## Requirements
 
